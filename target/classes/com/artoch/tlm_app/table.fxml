@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="150.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.artoch.tlm_app.TLMController">
+   <center>
+      <TableView fx:id="tableView" editable="true" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn id="counter" fx:id="counter" prefWidth="85.0" style="-fx-alignment: CENTER;" text="Packet #" />
+          <TableColumn id="time" fx:id="time" prefWidth="150.0" style="-fx-alignment: CENTER;" text="Time" />
+            <TableColumn id="sin" fx:id="sinus" prefWidth="150.0" style="-fx-alignment: CENTER;" text="sin ∠" />
+            <TableColumn id="checksum" fx:id="checksum" prefWidth="150.0" style="-fx-alignment: CENTER;" text="Checksum" />
+            <TableColumn id="checksumStatus" fx:id="checksumStatus" prefWidth="76.0" style="-fx-alignment: CENTER;" text="Valid" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToggleButton fx:id="startStopButton" mnemonicParsing="false" onAction="#onToggleReceiving" text="Start Receiving" />
+         </children>
+      </StackPane>
+   </bottom>
+</BorderPane>
